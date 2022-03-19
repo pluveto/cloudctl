@@ -1,0 +1,4 @@
+huaweicloudsdkcore==3.0.80
+huaweicloudsdkecs==3.0.80
+python-dotenv==0.19.2
+PyYAML==6.0
