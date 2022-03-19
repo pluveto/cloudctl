@@ -59,3 +59,42 @@ py cloudctl.py server --action stop --server-ids 38210be0-80ee-46f5-81ad-4ed2839
 ### 华为云相关凭证的获取
 
 访问 https://support.huaweicloud.com/devg-apisign/api-sign-provide.html
+
+## 扩展
+
+本项目可以自行扩展支持其它服务商。只需要在 `extensions` 目录下建立文件 `PROVIDER_NAME.py`
+
+### 调用约定
+
+你的扩展需要实现以下方法。返回值均为 dict 类型。
+<!-- 
+#### get_server_status
+参数：
+ + 无
+返回： -->
+#### list_servers
+
+参数：
+ + 无
+
+返回：
+ + `id: string`
+ + `status: string`
+ + `name: string`
+ + `public_ip: string`
+
+#### start_servers
+
+参数：
+ + `server_ids: Array<string>` 
+
+返回：
+ + 无
+
+#### stop_servers
+
+参数：
+ + `server_ids: Array<string>` 
+
+返回：
+ + 无
