@@ -30,6 +30,7 @@ def _filter_server_detail(server):
     d['id'] = server.id
     d['status'] = server.status
     d['name'] = server.name
+    d['private_ip'] = server.addresses.get(vpc_id)[0].addr
     d['public_ip'] = server.addresses.get(vpc_id)[-1].addr
     return d
 
