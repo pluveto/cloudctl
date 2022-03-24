@@ -82,6 +82,7 @@ py cloudctl.py server --action stop --server-ids 38210be0-80ee-46f5-81ad-4ed2839
    + `id: string`
    + `status: string`
    + `name: string`
+   + `private_ip: string`
    + `public_ip: string`
 
 #### start_servers
